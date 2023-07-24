@@ -23,4 +23,7 @@ sed -i -E 's/version = "[0-9.]+"/version = "'"${JGR_VERSION#jgrpp-}"'"/' jgr.nix
 sed -i -E 's/version = "[0-9.]+"/version = "'"${VANILLA_VERSION}"'"/' vanilla.nix
 
 nix-prefetch-github-latest-release $JGR_DEV $JGR_REPO > jgr.json
-nix-prefetch-github-latest-release $VANILLA_DEV $VANILLA_REPO > vanilla.json
+VANILLA_HASH=$(nix-prefetch-url --type sha256 \
+    https://cdn.openttd.org/openttd-releases/$VANILLA_VERSION/openttd-$VANILLA_VERSION-source.tar.xz)
+
+sed -i -E 's/sha256 = "[a-z0-9]+"/sha256 = "'${VANILLA_HASH}'"/' vanilla.nix
