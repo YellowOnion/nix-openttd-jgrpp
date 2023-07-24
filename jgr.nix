@@ -4,7 +4,7 @@ openttd.overrideAttrs (oldAttrs: rec {
   pname = "openttd-jgrpp";
   version = "0.54.4";
 
-  src = fetchFromGitHub (lib.importJSON ./version.json);
+  src = fetchFromGitHub (lib.importJSON ./jgr.json);
 
   buildInputs = oldAttrs.buildInputs ++ [ zstd ];
 })

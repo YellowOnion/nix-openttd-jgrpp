@@ -1,2 +1,5 @@
 { pkgs ? import <nixpkgs> {}, ... }:
-(pkgs.callPackage ./package.nix {})
+{
+  jgr = pkgs.callPackage ./jgr.nix {};
+  vanilla = pkgs.callPackage ./vanilla.nix {};
+}
