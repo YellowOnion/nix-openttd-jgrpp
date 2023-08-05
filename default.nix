@@ -7,7 +7,7 @@ rec {
         ''
         run_openttd () {
             cd $1
-            ./bin/openttd
+            exec ./bin/openttd
         }
         ${yad}/bin/yad --image ${vanilla}/share/icons/hicolor/128x128/apps/openttd.png \
                --text "Which Version of OpenTTD?" \
