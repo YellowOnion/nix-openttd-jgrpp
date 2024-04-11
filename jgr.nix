@@ -2,7 +2,7 @@
 
 openttd.overrideAttrs (oldAttrs: rec {
   pname = "openttd-jgrpp";
-  version = "0.54.5";
+  version = "0.58.3";
 
   src = fetchFromGitHub (lib.importJSON ./jgr.json);
 
