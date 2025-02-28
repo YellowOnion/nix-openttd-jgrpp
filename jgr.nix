@@ -7,4 +7,5 @@ openttd.overrideAttrs (oldAttrs: rec {
   src = fetchFromGitHub (lib.importJSON ./jgr.json);
 
   buildInputs = oldAttrs.buildInputs ++ [ zstd ];
+  patches = [];
 })
