@@ -13,8 +13,8 @@ rec {
                --text "Which Version of OpenTTD?" \
                --fixed \
                --buttons-layout=center \
-               --button "Vanilla:0" \
-               --button "JGR patch-pack:1" \
+               --button "Vanilla ${vanilla.version}:0" \
+               --button "JGR patch-pack ${jgr.version}:1" \
         && run_openttd ${vanilla} \
         || run_openttd ${jgr}
         '');

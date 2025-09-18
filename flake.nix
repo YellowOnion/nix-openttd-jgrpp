@@ -1,7 +1,7 @@
 {
   description = "bleeding edge openttd & launcher";
   inputs = {
-    nixpkgs.url = "nixpkgs/d6c6be587af1dda37e82041f855368c8a507c0f6";
+    nixpkgs.url = "nixpkgs/9807714d6944a957c2e036f84b0ff8caf9930bc0";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs = { self, nixpkgs, flake-utils }:
